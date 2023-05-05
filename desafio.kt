@@ -34,6 +34,13 @@ fun main() {
     formacao.matricular(usuario1)
     formacao.matricular(usuario2)
 
-    println(formacao.inscritos)
-    println(formacao.conteudos)
+   println("Inscritos:")
+    for (inscrito in formacao.inscritos) {
+        println("- ${inscrito.nome}")
+    }
+
+    println("\nConteúdos:")
+    for (conteudo in formacao.conteudos) {
+        println("- ${conteudo.nome} (${conteudo.duracao} minutos, nível ${conteudo.nivel})")
+    }
 }
